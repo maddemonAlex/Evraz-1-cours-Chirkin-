@@ -13,40 +13,69 @@ let a = 0
 let b = 1
 
 function maker() {
+    a=0
     if (a === 0) {
         let body = document.getElementById('body');
         body.style.backgroundColor = 'black';
-        let total = document.getElementById('total');
-        total.style.backgroundColor = 'white';
+        body.style.color = 'white';
+        total.innerText=0
     }
 }
 
 function make() {
-    if (a < 1) {
+    a=1
+    if (a = 1) {
         let body = document.getElementById('body');
         body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        total.innerText=1
     }
 }
 function makef() {
-    if (a < 2) {
+    a=2
+    if (a = 2) {
         let body = document.getElementById('body');
         body.style.backgroundColor = 'blue';
+        body.style.color = 'white';
+        total.innerText=2
     }
 }
 function makeg() {
-    if (a < 2) {
+    a=5
+    if (a = 5) {
         let body = document.getElementById('body');
         body.style.backgroundColor = 'green';
+        body.style.color = 'white';
+        total.innerText=5
     }
 }
 function maket() {
     a=a+1
     if (a % 2 === 0) {
         let body = document.getElementById('body');
-        body.style.backgroundColor = 'reb';
+        body.style.backgroundColor = 'red';
+        body.style.color = 'black';
+        total.innerText=a
+    }
+    else {
+        let body = document.getElementById('body');
+        body.style.backgroundColor = 'gold';
+        body.style.color = 'black';
+        total.innerText=a
     }
 }
-else{
-    let body = document.getElementById('body');
-    body.style.backgroundColor = 'reb';
+function makew() {
+    a=a-1
+    if (a % 2 === 1) {
+        let body = document.getElementById('body');
+        body.style.backgroundColor = 'gold';
+        body.style.color = 'black';
+        total.innerText=a
+    }
+    else {
+        let body = document.getElementById('body');
+        body.style.backgroundColor = 'red';
+        body.style.color = 'black';
+        total.innerText=a
+    }
 }
