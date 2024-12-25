@@ -1,0 +1,18 @@
+#red {
+    border-color: black;
+    color: black;
+}
+
+#blue {
+    border-color: black;
+    color:  white;
+}
+
+#green {
+    border-color: black;
+    color: darkgoldenrod;
+}
+#yellow {
+    border-color: darkblue;
+    color: greenyellow;
+}
