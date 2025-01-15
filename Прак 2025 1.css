@@ -1,37 +1,37 @@
-body {
+.body {
     margin: 0;
 }
 
-.head {
+.tyt {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.head-top {
+.hjh {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
-    height: 80px;
+    height: 90px;
 }
 
-.head-top-links {
+.cvc {
     display: flex;
     flex-direction: row;
 }
 
-.head-top-links .link {
+.cvc .sas {
     display: flex;
     align-items: center;
     padding-right: 20px;
 }
 
-.head-top-logo {
+.ghg {
     display: flex;
     align-items: center;
 }
 
-.head-bottom {
+.bottom {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -39,14 +39,8 @@ body {
     align-items: center;
     text-align: center;
 }
-.head-bottom-button {
+
+.perter {
     margin-top: 100px;
 }
 
-.head-bottom-button button {
-    background-color: #e84644;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-}
