@@ -38,9 +38,57 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('https://i.pinimg.com/originals/e1/19/9f/e1199f10de28b89380f9310a8c334039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .perter {
     margin-top: 100px;
 }
 
+.начало-второго-листа {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.начало-второго-листа2{
+    margin-top: 100px
+}
+.середина{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('https://avatars.mds.yandex.net/i?id=df85d25836b7d2761d71e4e2bab12c846c8391db3394139f-4897119-images-thumbs&n=13');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.середина-второго-листа{
+    margin-top: 100px
+}
+.картинка{
+    background-image: url('https://avatars.mds.yandex.net/i?id=df85d25836b7d2761d71e4e2bab12c846c8391db3394139f-4897119-images-thumbs&n=13');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bloc {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+    margin-top: 50px
+}
