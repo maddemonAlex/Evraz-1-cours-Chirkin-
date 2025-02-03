@@ -1,0 +1,27 @@
+/*.b{flex: 1 1 auto;*/
+/*display: grid;*/
+/*flex-direction: column;*/
+/*justify-content: center;*/
+/*align-items: center;*/
+/*text-align: center;}*/
+
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    width: 50%;
+}
+
+.li2 {
+    background-color: rgb(253, 10, 10);
+    border-color: #f40808;
+    color: #f40808;
+}
+.li1 {
+    background-color: rgb(16, 255, 0);
+    border-color: #50d31b;
+    color: #10ff00;
+}
