@@ -2,9 +2,11 @@ function make() {
     let input = document.getElementById('d1');
     let liElement = document.createElement('li');
     let addElement = document.getElementById('li1');
+
     liElement.innerText = input.value;
     addElement.append(liElement);
     input.value = ''
+    let input1 = document.getElementById('d3');
 }
 
 function make2() {
@@ -13,21 +15,22 @@ function make2() {
     let addElement = document.getElementById('li2');
     liElement.innerText = input.value;
     addElement.append(liElement);
-    input.value = ''
+    let input1 = document.getElementById('d4');
+    let liElement2 = document.createElement('li');
+    let addElement3 = document.getElementById('li2');
+    addElement3.append(liElement2);
+    input1.value = ''
 }
-function ler(){
+
+let i = input
+
+function ler() {
     let input = document.getElementById('d3');
     let liElement = document.createElement('li');
     let addElement = document.getElementById('li1');
-    liElement.innerText = input.value;
+    let i = input.innerText * input1.innerText
     addElement.append(liElement);
-    input.value = ''
+    input.value = i
+    // input.value = ''
 }
-function len(){
-    let input = document.getElementById('d4');
-    let liElement = document.createElement('li');
-    let addElement = document.getElementById('li2');
-    liElement.innerText * input.value;
-    addElement.append(liElement);
-    input.value = ''
-}
+
