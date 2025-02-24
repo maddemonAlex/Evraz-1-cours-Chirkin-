@@ -1,30 +1,52 @@
-// function make2() {
-//     let input = document.getElementById('d2');
-//     let liElement = document.createElement('li');
-//     let addElement = document.getElementById('li2');
-//     liElement.innerText = input.value;
-//     addElement.append(liElement);
-//     let input1 = document.getElementById('d4');
-//     let liElement2 = document.createElement('li');
-//     let addElement3 = document.getElementById('li2');
-//     addElement3.append(liElement2);
-//     input1.value = ''
-// }
+function make2() {
+    let input = document.getElementById('d2');
+    let input1 = document.getElementById('d4');
+    let addElement2 = document.getElementById('li2');
+    let a = +input1.value;
 
-function ler() {
+    if (input.value === '') {
+        alert('Укажите город')
+    }
+    else {
+        if (input1.value === '') {
+            alert('Укажите сколько добавить')
+        }
+        else {
+            for (let i = 0; i < a; i++) {
+                let liElement2 = document.createElement('li');
+                liElement2.innerText = input.value;
+                addElement2.append(liElement2)
+            }
+
+            input.value = ''
+        }
+    }
+
+}
+
+function lek() {
     let input = document.getElementById('d1');
     let input1 = document.getElementById('d3');
     let addElement2 = document.getElementById('li1');
+    let a = +input1.value;
 
-
-
-    for (let i = 0; i < 5; i++) {
-        let liElement2 = document.createElement('li');
-        liElement2.innerText = input.value;
-        addElement2.append(liElement2);
+    if (input.value === '') {
+        alert('Укажите город')
     }
+    else {
+        if (input1.value === '') {
+            alert('Укажите сколько добавить')
+        }
+        else {
+            for (let i = 0; i < a; i++) {
+                let liElement2 = document.createElement('li');
+                liElement2.innerText = input.value;
+                addElement2.append(liElement2)
+            }
 
-    input.value = ''
-
+            input.value = ''
+        }
+    }
 }
+
 
