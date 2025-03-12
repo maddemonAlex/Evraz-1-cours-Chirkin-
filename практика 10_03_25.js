@@ -5,16 +5,16 @@ let inputPrice = document.getElementById('price');
 let inputCount = document.getElementById('count');
 let inputDiscount = document.getElementById('discount');
 let inputDescription = document.getElementById('description');
-let inputPick_up_point= document.getElementById('Pick-up_point');
-let selectcolor = document.getElementById('color');
+let inputPick_up_point = document.getElementById('Pick-up_point');
+let selectcolor = document.getElementById('Color');
 let categories = {
     'clothes': 'Одежда',
     'shoes': 'Обувь',
     'tools': 'Инструменты',
 }
 let color = {
-    "white":'Белый',
-    "black":'Чёрный',
+    'white': 'Белый',
+    'black': 'Чёрный',
 }
 
 let specialsObj = {
@@ -58,13 +58,13 @@ function addTovar() {
         price = `<div class="tovar-price">
                     <div>Цена: </div>
                     <div>
-                        <div class="tovar-price-old">${ inputPrice.value } руб.</div>
-                        <div>${ newPrice } руб.</div>
+                        <div class="tovar-price-old">${inputPrice.value} руб.</div>
+                        <div>${newPrice} руб.</div>
                     </div>
                 </div>`
     }
     else {
-        price = `<div class="tovar-price">Цена: ${ inputPrice.value } руб.</div>`;
+        price = `<div class="tovar-price">Цена: ${inputPrice.value} руб.</div>`;
     }
     let cashText = '';
     let cash = document.querySelectorAll('input[name=cash]:checked');
@@ -82,16 +82,16 @@ function addTovar() {
         specialsText += ' ' + specialsObj[specials[i].value];
     }
 
-    let card = `<div class="tovar-name">${ inputName.value }</div>
-            <div class="tovar-category">${ categories[selectCategory.value] }</div>
-            <div class="tovar-color">${ categories[selectcolor.value] }</div>
-            <div class="tovar-specials">Особенности: ${ specialsText }</div>
-            <div class="tovar-description">Описание: ${ inputDescription.value }</div>
-            <div class="tovar-description">Пункт выдачи: ${ inputPick_up_point.value }</div>
-             <div class="tovar-cash">Оплата: ${ cashText }</div>
+    let card = `<div class="tovar-name">${inputName.value}</div>
+            <div class="tovar-category">${categories[selectCategory.value]}</div>
+            <div class="tovar-color">${color[selectcolor.value]}</div>
+            <div class="tovar-specials">Особенности: ${specialsText}</div>
+            <div class="tovar-description">Описание: ${inputDescription.value}</div>
+            <div class="tovar-description">Пункт выдачи: ${inputPick_up_point.value}</div>
+             <div class="tovar-cash">Оплата: ${cashText}</div>
             <div class="tovar-price-count">
-                ${ price }
-                <div class="count">Количество: ${ inputCount.value } шт.</div>
+                ${price}
+                <div class="count">Количество: ${inputCount.value} шт.</div>
             </div>
             <div class="tovar-close">X</div>`
 
