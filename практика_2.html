@@ -184,16 +184,16 @@
               rows="5"
       ></textarea>
     </div>
+      <div class="item">
+          <div>Пункт выдачи</div>
+          <textarea
+                  name=""
+                  id="Pick-up_point"
+                  cols="10"
+                  rows="5"
+          ></textarea>
+      </div>
   </form>
-  <div class="item">
-    <div>Пункт выдачи</div>
-    <textarea
-            name=""
-            id="Pick-up_point"
-            cols="10"
-            rows="5"
-    ></textarea>
-  </div>
 
   <div class="item">
     <button id="button-add" onclick="addTovar()">Добавить товар</button>
@@ -222,7 +222,7 @@
             </div>
             <div class="count">Количество: 1000 шт.</div>
         </div>
-        <div class="tovar-close">X</div>
+        <div class="tovar-close" onclick="close()">X</div>
         <div class="tovar-edit">
             <button onclick="edit()">Редактировать</button>
         </div>

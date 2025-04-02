@@ -12,6 +12,7 @@ let titleAdd = document.getElementById('title-add')
 let titleEdit = document.getElementById('title-edit')
 let selectcolor = document.getElementById('Color');
 let inputPick_up_point = document.getElementById('Pick-up_point');
+let tovar = document.getElementById('tovar');
 let products = [];
 
 // переменная для хранения индекса редактируемого товара
@@ -19,8 +20,8 @@ let currentEditProduct = null;
 
 let categories = {
     'clothes': 'Одежда',
-    'shoes':   'Обувь',
-    'tools':   'Инструменты',
+    'shoes': 'Обувь',
+    'tools': 'Инструменты',
 };
 let color = {
     'white': 'Белый',
@@ -28,7 +29,7 @@ let color = {
 }
 
 let specialsObj = {
-    'bu':      'Б/У',
+    'bu': 'Б/У',
     'fragile': 'Хрупкое',
 };
 let cashObj = {
@@ -54,7 +55,6 @@ function addTovar() {
 
     // находим активный радио-инпут, который выбран
     let discountChoose = document.querySelector('input[name=discount]:checked');
-
     let specialsValues = [];
     let specials = document.querySelectorAll('input[name=specials]:checked');
     for (let i = 0; i < specials.length; i++) {
@@ -62,15 +62,16 @@ function addTovar() {
     }
 
     let product = {
-        name:           inputName.value,
-        category:       selectCategory.value,
-        specials:       specialsValues,
-        description:    inputDescription.value,
+        name: inputName.value,
+        category: selectCategory.value,
+        specials: specialsValues,
+        description: inputDescription.value,
         Pick_up_point: inputPick_up_point.value,
         discountChoose: discountChoose.value,
-        discount:       inputDiscount.value,
-        price:          inputPrice.value,
-        count:          inputCount.value,
+        discount: inputDiscount.value,
+        price: inputPrice.value,
+        count: inputCount.value,
+        color: selectcolor.value,
     };
     let productIndex = products.push(product) - 1;
 
@@ -93,13 +94,13 @@ function addTovarCard(tovar, index) {
         price = `<div class="tovar-price">
                     <div>Цена: </div>
                     <div>
-                        <div class="tovar-price-old">${ tovar.price } руб.</div>
-                        <div>${ newPrice } руб.</div>
+                        <div class="tovar-price-old">${tovar.price} руб.</div>
+                        <div>${newPrice} руб.</div>
                     </div>
                 </div>`;
     }
     else {
-        price = `<div class="tovar-price">Цена: ${ tovar.price } руб.</div>`;
+        price = `<div class="tovar-price">Цена: ${tovar.price} руб.</div>`;
     }
 
     let cashText = '';
@@ -118,7 +119,7 @@ function addTovarCard(tovar, index) {
 
     let card = `<div class="tovar-name">${tovar.name}</div>
             <div class="tovar-category">${categories[tovar.category]}</div>
-            <div class="tovar-color">${color[selectcolor.value]}</div>
+            <div class="tovar-color">${color[tovar.color]}</div>
             <div class="tovar-specials">Особенности: ${specialsText}</div>
             <div class="tovar-description">Пункт выдачи: ${tovar.Pick_up_point}</div>
             <div class="tovar-description">${tovar.description}</div>
@@ -153,9 +154,11 @@ function edit(productIndex) {
     inputCount.value = product.count;
     inputDescription.value = product.description;
     selectCategory.value = product.category;
+    selectcolor.value = product.color
+    inputPick_up_point.value = product.Pick_up_point
 
     // ищем нужный инпут радио с нужным value значением, чтобы его отметить как выбранный
-    let radio = document.querySelector(`input[name=discount][value=${ product.discountChoose }]`);
+    let radio = document.querySelector(`input[name=discount][value=${product.discountChoose}]`);
     if (radio) {
         radio.checked = true;
     }
@@ -163,7 +166,7 @@ function edit(productIndex) {
     for (let i = 0; i < product.specials.length; i++) {
         // ищем нужный инпут чекбокс с нужным value значением, чтобы его отметить как выбранный
         let specialValue = product.specials[i];
-        let checkbox = document.querySelector(`input[name=specials][value=${ specialValue }]`);
+        let checkbox = document.querySelector(`input[name=specials][value=${specialValue}]`);
         if (checkbox) {
             checkbox.checked = true;
         }
@@ -201,7 +204,9 @@ function editTovar() {
     product.discount = inputDiscount.value;
     product.price = inputPrice.value;
     product.count = inputCount.value;
-
+    product.color = selectcolor.value;
+    product.Pick_up_point = inputPick_up_point.value
+    product.Pick_up_point = inputPick_up_point.value;
     form.reset();
 
     buildAgain();
@@ -215,4 +220,16 @@ function buildAgain() {
         let product = products[i];
         addTovarCard(product, i)
     }
+}
+
+function close() {
+    document.addEventListener('DOMContentLoaded', function () {
+        var showPizza = document.getElementById('tovary');
+        var pizza = document.getElementsByClassName('tovar');
+
+        showPizza.addEventListener('click', function (e) {
+            e.preventDefault();
+            pizza.className.remove('hide');
+        });
+    });
 }
